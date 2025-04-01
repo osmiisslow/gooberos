@@ -21,7 +21,7 @@
     ../services/flatpak
   ];
   catppuccin = {
-    enable = false;
+    enable = true;
     flavor = "macchiato";
     accent = "maroon";
   };
