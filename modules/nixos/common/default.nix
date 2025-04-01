@@ -40,6 +40,7 @@
     ../settings/audio
 
     ../packages/c-cpp
+    ../packages/flatpak
     ../packages/rust
   ];
 
