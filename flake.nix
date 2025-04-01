@@ -35,7 +35,7 @@
     home-manager,
     ...
   } @ inputs: let
-    inherit (self) outputs;
+    inherit (self) inputs outputs;
     # Supported systems for your flake packages, shell, etc.
     systems = [
       "aarch64-linux"
@@ -65,7 +65,10 @@
           userConfig = users.${username};
           nixosModules = "${self}/modules/nixos";
         };
-        modules = [./hosts/${hostname}];
+        modules = [
+          ./hosts/${hostname}
+          inputs.catppuccin.nixosModules.catppuccin
+        ];
       };
 
     #function that creates Home Manager configuartion
@@ -79,9 +82,9 @@
         };
         modules = [
           ./home/${username}/${hostname}
-          catppuccin.homeManagerModules.catppuccin
-          nix-flatpak.homeManagerModules.nix-flatpak
-          nvf.homeManagerModules.default
+          inputs.catppuccin.homeModules.catppuccin
+          inputs.nix-flatpak.homeManagerModules.nix-flatpak
+          inputs.nvf.homeManagerModules.default
         ];
       };
 

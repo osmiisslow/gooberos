@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    ./hardware-configuartion.nix
+    ./hardware-configuration.nix
     "${nixosModules}/common"
     "${nixosModules}/desktop/gnome"
     "${nixosModules}/settings/nvidia-optimus"

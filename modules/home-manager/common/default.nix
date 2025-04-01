@@ -3,6 +3,7 @@
   outputs,
   lib,
   config,
+  userConfig,
   pkgs,
   ...
 }: {
@@ -19,7 +20,11 @@
 
     ../services/flatpak
   ];
-
+  catppuccin = {
+    enable = false;
+    flavor = "macchiato";
+    accent = "maroon";
+  };
   nixpkgs = {
     # You can add overlays here
     overlays = [

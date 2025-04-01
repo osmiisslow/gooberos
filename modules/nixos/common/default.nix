@@ -4,6 +4,7 @@
   inputs,
   lib,
   config,
+  userConfig,
   pkgs,
   ...
 }: {
@@ -63,8 +64,10 @@
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
   };
 
+  nixpkgs.config.allowUnfree = true;
 
   # User configuration
+  programs.zsh.enable = true; # this must be enabled for zsh shell to work.
   users.users.${userConfig.name} = {
     initialPassword = "changethispassword";
     description = userConfig.fullName;
