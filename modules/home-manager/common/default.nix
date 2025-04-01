@@ -8,6 +8,7 @@
   ...
 }: {
   imports = [
+    ../programs/discord
     ../programs/flatseal
     ../programs/neovim
     ../programs/nh
