@@ -4,7 +4,9 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  assets = ../../../../assets;
+ in {
   home.packages = with pkgs; [
     gnomeExtensions.worksets
     gnomeExtensions.dash-to-dock
@@ -42,11 +44,11 @@
         "worksets@blipk.xyz"
       ];
     };
-    /*
+    
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file://" + ../assets/wallpapers/rainbow-cat.png;
-    };*/
+      picture-uri = "file://${assets}/wallpapers/rainbow-cat.png";
+    };
   };
 }

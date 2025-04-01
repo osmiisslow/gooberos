@@ -5,11 +5,12 @@
   config,
   pkgs,
   nhModules,
+  desktop,
   ...
 }: {
   imports = [
     "${nhModules}/common"
-    "${nhModules}/desktop/gnome"
+    "${nhModules}/desktop/${desktop}"
   ];
 
   # Enable home-manager and git

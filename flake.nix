@@ -58,12 +58,13 @@
     };
 
     # function that creates nixos configurations
-    genNixosConfig = hostname: username:
+    genNixosConfig = hostname: username: desktop:
       nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs outputs hostname;
           userConfig = users.${username};
           nixosModules = "${self}/modules/nixos";
+          desktop = desktop;
         };
         modules = [
           ./hosts/${hostname}
@@ -72,13 +73,14 @@
       };
 
     #function that creates Home Manager configuartion
-    genHomeConfig = system: username: hostname:
+    genHomeConfig = system: username: hostname: desktop:
       home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { inherit system; };
         extraSpecialArgs = {
           inherit inputs outputs;
           userConfig = users.${username};
           nhModules = "${self}/modules/home-manager";
+          desktop = desktop;
         };
         modules = [
           ./home/${username}/${hostname}
@@ -107,16 +109,17 @@
 
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
+    
     nixosConfigurations = {
       # FIXME replace with your hostname
-      goober = genNixosConfig "goober" "osmi";
+      goober = genNixosConfig "goober" "osmi" "gnome";
     };
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       # FIXME replace with your username@hostname
-      "osmi@goober" = genHomeConfig "x86_64-linux" "osmi" "goober";
+      "osmi@goober" = genHomeConfig "x86_64-linux" "osmi" "goober" "gnome";
     };
   };
 }
