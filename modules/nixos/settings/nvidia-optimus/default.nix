@@ -15,7 +15,8 @@
   services.xserver.videoDrivers = ["nvidia"];
   # xwayland support
   programs.xwayland.enable = true;
-
+  #append to kernalParams
+  boot.kernelParams = [ "nvidia_drm.fbdev=1" ]; 
   hardware.nvidia = {
 
     # Modesetting is required.

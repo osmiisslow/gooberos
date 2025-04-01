@@ -1,0 +1,4 @@
+configuration {}
+
+@import "catppuccin-macchiato"
+@theme "catppuccin-default"

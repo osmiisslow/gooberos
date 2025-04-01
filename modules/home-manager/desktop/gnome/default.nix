@@ -24,6 +24,7 @@
     gnomeExtensions.vitals
     gnome-tweaks
     gnome-extension-manager
+    pop-launcher
   ];
 
   dconf.settings = {
@@ -44,11 +45,14 @@
         "worksets@blipk.xyz"
       ];
     };
-    
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    }; 
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
       picture-uri = "file://${assets}/wallpapers/rainbow-cat.png";
+      picture-uri-dark = "file://${assets}/wallpapers/rainbow-cat.png";
     };
   };
 }
