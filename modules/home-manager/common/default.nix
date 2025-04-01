@@ -19,6 +19,7 @@
     ../programs/zsh
 
     ../services/flatpak
+    ../misc/gtk
   ];
   catppuccin = {
     enable = true;
