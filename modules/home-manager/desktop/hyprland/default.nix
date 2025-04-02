@@ -12,6 +12,7 @@ in{
     ./rofi
     #./waybar
     ./hyprbar
+    ./hyprlock
   ];
 
   xdg.portal = {
