@@ -32,6 +32,13 @@ in{
     size = 24;
   };
 
+
+  catppuccin.hyprland = {
+    enable = true;
+    flavor = "macchiato";
+    accent = "maroon";
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -52,6 +59,8 @@ in{
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
+        "col.active_border" = "$red";
+        "col.inactive_border" = "$surface0";
         layout = "dwindle";
         allow_tearing = false;
         resize_on_border = true;
@@ -108,6 +117,10 @@ in{
         touchpad = {
           natural_scroll = false;
         };
+      };
+
+      decoration = {
+        rounding = 10;
       };
 
       gestures = {
@@ -199,10 +212,10 @@ in{
         # fix some dragging issues with xwayland
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
       ];
-
+      
       exec-once = [
-        #"swww init &"
-        #"sww img ${assets}/wallpapers/rainbow-cat.png"
+        "swww init &"
+        "swww img ${assets}/wallpapers/nord-ign_sunset_valley.png"
         #"nm-applet --indicator &"
         #"blueman-applet &"
         #"waybar &"
@@ -213,10 +226,5 @@ in{
         "eDP-1, 1920x1080@144, 1920x0, 1"
       ];
     };
-  };
-  catppuccin.hyprland = {
-    enable = true;
-    flavor = "macchiato";
-    accent = "maroon";
   };
 }

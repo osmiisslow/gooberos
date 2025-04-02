@@ -55,12 +55,12 @@ in{
           };
         };
       };
-
+      /*
       wallpaper = {
         enable = true;
         image = "${assets}/wallpapers/nord-ign_sunset_valley.png";
         pywal = true;
-      };
+      }; */
 
       menus.dashboard.directories.enabled = false;
       menus.dashboard.stats.enable_gpu = true;

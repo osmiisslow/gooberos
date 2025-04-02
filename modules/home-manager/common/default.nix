@@ -10,6 +10,7 @@
   imports = [
     ../programs/discord
     ../programs/flatseal
+    ../programs/neofetch
     ../programs/neovim
     ../programs/nh
     ../programs/prismlauncher
