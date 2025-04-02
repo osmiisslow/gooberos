@@ -21,6 +21,9 @@
     
     # Stylix
     stylix.url = "github:danth/stylix";
+
+    # Hyprbar(for hyprland)
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     
     # nvf(neovim with nix)
     nvf.url = "github:notashelf/nvf";
@@ -87,6 +90,7 @@
           inputs.catppuccin.homeModules.catppuccin
           inputs.nix-flatpak.homeManagerModules.nix-flatpak
           inputs.nvf.homeManagerModules.default
+          inputs.hyprpanel.homeManagerModules.hyprpanel
         ];
       };
 

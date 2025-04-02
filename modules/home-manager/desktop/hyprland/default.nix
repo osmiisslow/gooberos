@@ -10,7 +10,8 @@ let
 in{
   imports = [
     ./rofi
-    ./waybar
+    #./waybar
+    ./hyprbar
   ];
 
   xdg.portal = {
@@ -198,7 +199,7 @@ in{
         "sww img ${assets}/wallpapers/rainbow-cat.png"
         "nm-applet --indicator &"
         "blueman-applet &"
-        "waybar &"
+        #"waybar &"
       ];
       #configure monitors.
       monitor = [

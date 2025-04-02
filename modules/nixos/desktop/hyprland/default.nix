@@ -32,10 +32,10 @@
   environment.systemPackages = with pkgs; [
      swww # wallpaper daemon
      kitty # for the terminal
-     (waybar.overrideAttrs (oldAttrs: {
-         mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-       })
-     ) # top bar for hyprland
+     #(waybar.overrideAttrs (oldAttrs: {
+     #    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+     #  })
+     #) # top bar for hyprland
      dunst # notification daemon
      libnotify # needed for dunst to work
      rofi-wayland # menu bar
