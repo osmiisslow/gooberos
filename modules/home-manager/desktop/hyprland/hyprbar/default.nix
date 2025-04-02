@@ -58,7 +58,7 @@ in{
 
       wallpaper = {
         enable = true;
-        image = "${assets}/wallpapers/rainbow-cat.png";
+        image = "${assets}/wallpapers/nord-ign_sunset_valley.png";
         pywal = true;
       };
 
