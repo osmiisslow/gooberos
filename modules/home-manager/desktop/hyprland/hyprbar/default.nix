@@ -4,7 +4,9 @@
   config,
   pkgs,
   ...
-}: {
+}: let 
+  assets = ../../../../../assets;
+in{
   programs.hyprpanel = {
     enable = true;
 
@@ -43,13 +45,30 @@
         weather.unit = "metric";
       };
 
+      menus = {
+        dashboard = {
+          shortcuts = {
+            left = {
+              shortcut1.command = "zen";
+              shortcut2.command = "spotify";
+            };
+          };
+        };
+      };
+
+      wallpaper = {
+        enable = true;
+        image = "${assets}/wallpapers/rainbow-cat.png";
+        pywal = true;
+      };
+
       menus.dashboard.directories.enabled = false;
       menus.dashboard.stats.enable_gpu = true;
 
       theme.bar.transparent = true;
 
       theme.font = {
-        name = "CaskaydiaCove NF";
+        name = "Caskaydia Cove Nerd Font";
         size = "16px";
       };
     };

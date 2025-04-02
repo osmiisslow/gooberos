@@ -30,20 +30,25 @@
 
   # needed packages for hyprland
   environment.systemPackages = with pkgs; [
-     swww # wallpaper daemon
-     kitty # for the terminal
-     #(waybar.overrideAttrs (oldAttrs: {
-     #    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-     #  })
-     #) # top bar for hyprland
-     dunst # notification daemon
-     libnotify # needed for dunst to work
-     rofi-wayland # menu bar
-     wofi
-     networkmanagerapplet # for waybar :3   
-     blueman # applet
-     hyprlock # need to lock my screen yknow
-     pcmanfm # file manager
+    swww # wallpaper daemon
+    kitty # for the terminal
+    #(waybar.overrideAttrs (oldAttrs: {
+    #    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+    #  })
+    #) # top bar for hyprland
+    dunst # notification daemon
+    libnotify # needed for dunst to work
+    rofi-wayland # menu bar
+    wofi
+    networkmanagerapplet # for waybar :3   
+    blueman # applet
+    hyprlock # need to lock my screen yknow
+    pcmanfm # file manager
      
+    # screenshot utilities
+    grim
+    slurp
+    wl-clipboard
+    grimblast
   ];
 }

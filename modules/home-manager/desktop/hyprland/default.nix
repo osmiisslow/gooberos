@@ -120,10 +120,12 @@ in{
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating,"
-        "$mainMod, R, exec, $menu"
+        "$mainMod, R, exec, $menu" # normal menu, no nvidia-offloading
+        "$mainMod, N, exec, nvidia-offload $menu -display-drun drun-nvidia" # nvidia-offload menu
         "$mainMod, P, pseudo, "# dwindle
         "$mainMod, J, togglesplit, "# dwindle
-        "$mainMod, L, exec, $lockscreen"
+        "$mainMod, L, exec, $lockscreen" # lock screen
+        "$mainMod, F, fullscreen" # fullscreen shortcut
         
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
@@ -162,6 +164,9 @@ in{
         # Scroll through existing workspaces with mainMod + scroll
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
+        
+        #screenshot :3
+        ", Print, exec, grimblast copy area"
       ];
 
       bindm = [
@@ -195,10 +200,10 @@ in{
       ];
 
       exec-once = [
-        "swww init &"
-        "sww img ${assets}/wallpapers/rainbow-cat.png"
-        "nm-applet --indicator &"
-        "blueman-applet &"
+        #"swww init &"
+        #"sww img ${assets}/wallpapers/rainbow-cat.png"
+        #"nm-applet --indicator &"
+        #"blueman-applet &"
         #"waybar &"
       ];
       #configure monitors.

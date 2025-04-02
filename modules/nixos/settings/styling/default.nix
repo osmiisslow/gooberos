@@ -19,12 +19,22 @@
   catppuccin.accent = "maroon";
 
   # font bullshit 
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      monospace = [ "Caskaydia Cove Nerd Font"];
+      serif = [ "DejaVu Sans" ];
+      sansSerif = [ "Dejavu Sans " ];
+    };
+  };
   
   fonts.packages = with pkgs; [
     noto-fonts
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     font-awesome
+    dejavu_fonts
+    liberation_ttf
     fira-code
     fira-code-symbols
     nerd-fonts.jetbrains-mono
@@ -33,5 +43,8 @@
     nerd-fonts.caskaydia-cove
     nerd-fonts.caskaydia-mono
     nerd-fonts.jetbrains-mono
+    nerd-fonts.ubuntu
+    nerd-fonts.ubuntu-sans
+    nerd-fonts.ubuntu-mono
   ];
 }

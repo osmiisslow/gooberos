@@ -74,6 +74,8 @@
     };
   };
   */
-  
+  environment.systemPackages = with pkgs; [
+    mesa-demos
+  ];
   services.switcherooControl.enable = true;
 }
