@@ -78,7 +78,12 @@
     #function that creates Home Manager configuartion
     genHomeConfig = system: username: hostname: desktop:
       home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs { 
+          inherit system; 
+          overlays = [
+            inputs.hyprpanel.overlay
+          ];
+        };
         extraSpecialArgs = {
           inherit inputs outputs;
           userConfig = users.${username};

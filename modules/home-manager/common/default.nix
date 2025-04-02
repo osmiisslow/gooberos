@@ -12,9 +12,11 @@
     ../programs/flatseal
     ../programs/neovim
     ../programs/nh
+    ../programs/prismlauncher
     ../programs/roblox
     ../programs/spotify
     ../programs/steam
+    ../programs/telegram
     ../programs/vscode
     ../programs/zen-browser
     ../programs/zsh

@@ -32,5 +32,6 @@
     nerd-fonts.hack
     nerd-fonts.caskaydia-cove
     nerd-fonts.caskaydia-mono
+    nerd-fonts.jetbrains-mono
   ];
 }

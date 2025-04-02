@@ -8,13 +8,13 @@
   programs.hyprpanel = {
     enable = true;
 
-    systemd.enable = true;
+    #systemd.enable = true;
 
     hyprland.enable = true;
 
     overwrite.enable = true;
 
-    theme = "macchiato";
+    theme = "catppuccin_macchiato_split";
 
     layout = {
       "bar.layouts" = {
