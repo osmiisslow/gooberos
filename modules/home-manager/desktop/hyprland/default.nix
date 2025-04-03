@@ -139,7 +139,8 @@ in{
         "$mainMod, P, pseudo, "# dwindle
         "$mainMod, J, togglesplit, "# dwindle
         "$mainMod, L, exec, $lockscreen" # lock screen
-        "$mainMod, F, fullscreen" # fullscreen shortcut
+        "$mainMod SHIFT, F, fullscreen" # fullscreen shortcut
+        "$mainMod, F, fullscreen, 1"
         
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
