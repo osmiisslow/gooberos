@@ -23,6 +23,7 @@
     ../programs/zsh
 
     ../services/flatpak
+    ../services/lorri
     ../misc/gtk
   ];
   catppuccin = {
