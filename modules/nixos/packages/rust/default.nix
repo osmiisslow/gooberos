@@ -6,8 +6,9 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-     # rust
-     cargo
-     rustc
+    # rust
+    cargo
+    rustco use the x11 feature
+    libxkbcommon wayland # To use the wayland feature
   ];
 }
