@@ -20,4 +20,7 @@
       theme = "duellj";
     };
   };
+  home.packages = with pkgs; [
+    thefuck   
+  ];
 }
