@@ -38,6 +38,7 @@
     ../settings/networking
     ../settings/styling
     ../settings/audio
+    ../settings/ld
 
     ../packages/c-cpp
     ../packages/flatpak
