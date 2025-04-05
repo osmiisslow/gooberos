@@ -7,9 +7,6 @@
 }: {
   environment.systemPackages = with pkgs; [
      # c development bullshit
-     SDL
-     SDL2
-     sdl3
      gcc
      cmake
      gnumake
