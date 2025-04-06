@@ -16,24 +16,22 @@ in{
 
     overwrite.enable = true;
 
-    theme = "catppuccin_macchiato_split";
-
-    layout = {
-      "bar.layouts" = {
-        "0" = {
-          left = [ "dashboard" "workspaces" ];
-          middle = [ "media" ];
-          right = [ "volume" "systray" "notifications" ];
-        };
-      };
-    };
-
     # Configure and theme almost all options from the GUI.
     # Options that require '{}' or '[]' are not yet implemented,
     # except for the layout above.
     # See 'https://hyprpanel.com/configuration/settings.html'.
     # Default: <same as gui>
     settings = {
+      theme.name = "catppuccin_macchiato_split";
+      layout = {
+        "bar.layouts" = {
+          "0" = {
+            left = [ "dashboard" "workspaces" ];
+            middle = [ "media" ];
+            right = [ "volume" "systray" "notifications" ];
+          };
+        };
+      };
       bar.launcher.autoDetectIcon = true;
       bar.workspaces.show_icons = true;
 
@@ -51,6 +49,11 @@ in{
             left = {
               shortcut1.command = "zen";
               shortcut2.command = "spotify";
+            };
+          };
+          powermenu = {
+            avatar = {
+              image = "${assets}/profiles/wires.jpg";
             };
           };
         };
