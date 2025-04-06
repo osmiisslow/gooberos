@@ -15,6 +15,7 @@
     ../programs/nh
     ../programs/prismlauncher
     ../programs/roblox
+    ../programs/sony-headphones-client
     ../programs/spotify
     ../programs/steam
     ../programs/telegram
