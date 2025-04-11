@@ -10,5 +10,6 @@
     (discord.override {
       withVencord = true;
     })
+    legcord
   ];
 }
