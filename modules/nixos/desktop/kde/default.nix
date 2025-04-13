@@ -10,7 +10,7 @@
     libinput.enable = true;
     displayManager.sddm = {
       package = pkgs.kdePackages.sddm;
-      wayland = true;
+      wayland.enable = true;
       enable = true;
     };
     desktopManager.plasma6.enable = true;
