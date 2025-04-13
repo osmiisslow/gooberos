@@ -9,7 +9,6 @@
     enable = true;
     libinput.enable = true;
     displayManager.sddm = {
-      package = pkgs.kdePackages.sddm;
       wayland.enable = true;
       enable = true;
     };
