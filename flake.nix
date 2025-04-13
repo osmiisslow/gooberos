@@ -121,14 +121,14 @@
     
     nixosConfigurations = {
       # FIXME replace with your hostname
-      goober = genNixosConfig "goober" "osmi" "hyprland";
+      goober = genNixosConfig "goober" "osmi" "kde";
     };
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       # FIXME replace with your username@hostname
-      "osmi@goober" = genHomeConfig "x86_64-linux" "osmi" "goober" "hyprland";
+      "osmi@goober" = genHomeConfig "x86_64-linux" "osmi" "goober" "kde";
     };
   };
 }
