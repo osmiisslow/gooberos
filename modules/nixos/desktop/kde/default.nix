@@ -5,9 +5,11 @@
   pkgs,
   ...
 }: {
-  services.xserver = {
-    enable = true;
-    libinput.enable = true;
+  service = {
+    xserver = {
+      enable = true;
+      libinput.enable = true;
+    };
     displayManager.sddm = {
       wayland.enable = true;
       enable = true;
