@@ -5,6 +5,7 @@
   pkgs,
   ...
 }: {
+  hardware.bluetooth.enable = true;
   services = {
     xserver = {
       enable = true;
@@ -19,6 +20,7 @@
   environment.systemPackages = with pkgs; [
     kitty # terminal replace
     vlc # we should probably have this .w.
+    blueman # bluetooth
   ];
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     konsole
