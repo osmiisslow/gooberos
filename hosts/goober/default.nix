@@ -13,4 +13,5 @@
   ];
 
   networking.hostName = hostname;
+  powerManagement.cpuFreqGovernor = "performance"; 
 }
