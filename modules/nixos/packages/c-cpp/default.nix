@@ -12,6 +12,6 @@
      gnumake
      clang
      clang-tools
-     
+     mold
   ];
 }

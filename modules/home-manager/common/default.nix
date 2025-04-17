@@ -8,19 +8,13 @@
   ...
 }: {
   imports = [
+    ../programs
     ../programs/discord
     ../programs/flatseal
-    ../programs/neofetch
     ../programs/neovim
     ../programs/nh
-    ../programs/prismlauncher
     ../programs/roblox
-    ../programs/sony-headphones-client
-    ../programs/spotify
-    ../programs/steam
-    ../programs/telegram
     ../programs/vscode
-    ../programs/zen-browser
     ../programs/zsh
 
     ../services/flatpak
