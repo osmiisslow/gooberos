@@ -11,6 +11,7 @@
     ../programs
     ../programs/discord
     ../programs/flatseal
+    ../programs/helix
     ../programs/neovim
     ../programs/nh
     ../programs/roblox
