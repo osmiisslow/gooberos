@@ -7,7 +7,7 @@
 }: {
   environment.systemPackages = with pkgs; [
      # c development bullshit
-     gcc
+     #gcc
      cmake
      gnumake
      clang
